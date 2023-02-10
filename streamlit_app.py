@@ -1,3 +1,3 @@
 import streamlit
 
-streamlit.title("Snowflake workshop: My parents new healthy diner")
+streamlit.title('My parents new healthy diner')
