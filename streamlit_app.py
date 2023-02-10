@@ -1,7 +1,11 @@
-import streamlit
+import streamlit as st 
 
-streamlit.header('Breakfast Menu')
-streamlit.text('Omega 3 & Blueberry Oatmeal')
-streamlit.text('Kale, Spinach & Rocket Smoothie')
-streamlit.text('Hard-Boiled Free-Range Egg')
+st.title("Main Page")
 
+
+if st.button("My Button"):
+    my_input = st.text_input("Input a text here")
+    _, center, _ = st.columns([3, 1, 3])
+    submit = center.button("Submit")
+    if submit:
+        st.write("You have entered: ", my_input)
