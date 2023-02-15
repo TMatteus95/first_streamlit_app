@@ -2,6 +2,10 @@
 # bad structure of this file is due to i want to keep the code inte the order that is it presented throughout the course 
 
 import streamlit
+import pandas as pd 
+import requests
+import snowflake.connector
+from urllib.error import URLError
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -11,7 +15,6 @@ streamlit.text('🥑🍞 Avocado toast')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas as pd 
 
 #Loading data
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -28,7 +31,6 @@ streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
-import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 # load response to json
@@ -40,7 +42,6 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 streamlit.stop()
-import snowflake.connector
 
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
