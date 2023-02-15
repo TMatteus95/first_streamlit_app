@@ -1,3 +1,6 @@
+# Code for a snowflake course 
+# bad structure of this file is due to i want to keep the code inte the order that is it presented throughout the course 
+
 import streamlit
 
 streamlit.header('Breakfast Menu')
@@ -33,3 +36,6 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 
 # load json to df 
 streamlit.dataframe(fruityvice_normalized)
+
+
+import snowflake.connector
