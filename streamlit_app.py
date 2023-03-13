@@ -22,7 +22,7 @@ folium.TileLayer('cartodbdark_matter').add_to(m)
 
 st_data = st_folium(m, width=700)
 
-
+"""
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗 Kale, Spinach & Rocket Smoothie')
@@ -89,5 +89,5 @@ if streamlit.button('Add a fruit to the list'):
     streamlit.text(back_from_function)
 
 
-
+"""
 
