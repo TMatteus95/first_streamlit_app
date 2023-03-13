@@ -20,7 +20,7 @@ folium.Marker(
     [56.260860, 12.550790], popup="<i>Holy Smoke BBQ</i>", tooltip=tooltip
 ).add_to(m)
 
-
+st_data = st_folium(m, width=700)
 
 
 streamlit.header('Breakfast Menu')
