@@ -75,6 +75,6 @@ if streamlit.button('Add a fruit to the list'):
     streamlit.text(back_from_function)
 
 
-m = folium.Map(location=[57.708870, 11.974560], zoom_start=1)
+m = folium.Map(location=[57.708870, 11.974560], zoom_start=10)
 st_data = st_folium(m, width=700)
 
