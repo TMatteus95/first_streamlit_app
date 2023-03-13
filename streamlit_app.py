@@ -7,6 +7,7 @@ import requests
 import snowflake.connector
 from urllib.error import URLError
 import folium
+from streamlit_folium import st_folium, folium_static
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -74,3 +75,5 @@ if streamlit.button('Add a fruit to the list'):
     streamlit.text(back_from_function)
 
 
+m = folium.Map(location=[45.5236, -122.6750])
+st_data = st_folium(m, width=700)
