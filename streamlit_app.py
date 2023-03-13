@@ -12,7 +12,6 @@ from streamlit_folium import st_folium, folium_static
 
 
 m = folium.Map(location=[57.708870, 11.974560], zoom_start=6)
-st_data = st_folium(m, width=700)
 
 tooltip = "Click me!"
 
